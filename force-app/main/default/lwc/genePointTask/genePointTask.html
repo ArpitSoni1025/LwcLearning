@@ -1,0 +1,27 @@
+<template>
+    <lightning-card>
+    <lightning-record-edit-form 
+        record-id={recordId}
+        object-api-name="Contact">
+            <lightning-messages></lightning-messages>
+        <template if:true={Numone}>
+            <lightning-input-field field-name="FirstName"></lightning-input-field>
+            <lightning-input-field field-name="LastName"></lightning-input-field>
+        </template>
+        <template if:true={Numtwo}>
+            <lightning-input-field field-name="Email"></lightning-input-field> 
+            <lightning-input-field field-name="Phone"></lightning-input-field>
+        </template>
+        <template if:true={Numthree}>
+            <lightning-input-field field-name="Fax"></lightning-input-field> 
+            
+        </template>
+            <div class="slds-align_absolute-center slds-p-around_medium">
+                <lightning-button class="slds-m-around_xx-small" label="Cancel" onclick={handleReset}></lightning-button>
+                <lightning-button class="slds-m-around_xx-small" label="Create Contact" type="submit" variant="brand" ></lightning-button>
+                <lightning-button label="Previous" icon-name="utility:chevronleft" onclick={previousHandler} ></lightning-button>
+                <lightning-button label="Next" icon-name="utility:chevronright" onclick={nextHandler} ></lightning-button>
+            </div>
+    </lightning-record-edit-form>
+</lightning-card>
+</template>

@@ -1,0 +1,193 @@
+<template>
+    <div class="slds-box" style="background-color: white; height:205px;">
+      <h1 style="font-size: 50px;">
+        <span style="color: rgb(175, 206, 0);"> GO OR</span>&nbsp; <span style="color: rgb(240, 53, 94);">NO GO?</span>
+      </h1>
+      <h3 style="font-size: 20px;">SHOULD YOU PITCH TO THIS CLIENT?</h3>
+    </div>
+    <div class="slds-box" style="background-color: white; height:820px;">
+      <!--   1 DIV -->
+      <div class="slds-box slds-float_left div">
+        <table>
+          <tr>
+            <th>
+              <img class="img" src="https://cdn-icons-png.flaticon.com/128/636/636600.png" alt="Dimand">
+              <!-- <lightning-icon icon-name="custom:custom43" title="custom88"></lightning-icon> -->
+            </th>
+          </tr>
+          <tr>
+            <td>
+              <center>
+                <h5 style="color:black;">
+                  <span style="background-color: antiquewhite;">
+                    <b>How <i>ATTRACTIVE</i> is this opportunity? </b>
+                  </span>
+                </h5>
+              </center>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <center>Contract Risk</center>
+            </td>
+          </tr>
+          <tr>
+            <!--<td style="background-color: rgb(214, 226, 235);">
+              <lightning-slider label="." max="10" variant="label-hnameden" disabled='' name="s1" value="0" onchange={handleChange} ></lightning-slider>-->
+              <td>
+              <lightning-slider label="" max="10" variant="label-hnameden" name="s1" value="0" onchange={handleChange} disabled={Lockval}></lightning-slider>
+            </td>
+          </tr>
+          <tr>
+            <td style="font-size: 10px;"> We accept design risk &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;There is no design risk </td>
+          </tr>
+          <tr>
+            <td>
+              <div align="center">Contract Approval Status</div>
+              <lightning-slider label="" max="10" variant="label-hnameden" name="s2" value="0" onchange={handleChange} disabled={Lockval}></lightning-slider>
+            </td>
+          </tr>
+          <tr>
+            <td style="font-size: 10px;"> Unapproved contract &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Pre-agreed terms in place </td>
+          </tr>
+          <tr>
+            <td>
+              <div align="center">Client's Budget</div>
+              <lightning-slider label="" max="10" variant="label-hnameden" name="s3" value="0" onchange={handleChange} disabled={Lockval}></lightning-slider>
+            </td>
+          </tr>
+          <tr>
+            <td style="font-size: 10px;"> Completely cost focused &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; No budget constraints </td>
+          </tr>
+          <tr>
+            <td>
+              <div align="center">Programing & Staging Risk</div>
+              <lightning-slider label="" max="10" variant="label-hnameden" name="s4" value="0" onchange={handleChange} disabled={Lockval}></lightning-slider>
+            </td>
+          </tr>
+          <tr>
+            <td style="font-size: 10px;"> High &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Medium &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Low </td>
+          </tr>
+          <tr>
+            <td>
+              <div align="center">Future Opportunities</div>
+              <lightning-slider label="" max="10" variant="label-hnameden" name="s5" value="0" onchange={handleChange} disabled={Lockval}></lightning-slider>
+            </td>
+          </tr>
+          <tr>
+            <td style="font-size: 10px;"> No&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Maybe &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Yes </td>
+          </tr>
+          <tr>
+            <td>
+              <div align="center">Multi-service Opportunity</div>
+              <lightning-slider label="" max="10" variant="label-hnameden" name="s6" value="0" onchange={handleChange} disabled={Lockval}></lightning-slider>
+            </td>
+          </tr>
+          <tr>
+            <td style="font-size: 10px;"> No&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Maybe &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Yes </td>
+          </tr>
+        </table>
+      </div> &nbsp;&nbsp;&nbsp;&nbsp;
+      <!--   2 DIV -->
+      <div class="slds-box slds-float_left div">
+        <table>
+          <tr>
+            <th>
+              <img class="img" src="https://img.icons8.com/external-jumpicon-line-ayub-irawan/344/external-_26-super-bowl-jumpicon-(line)-jumpicon-line-ayub-irawan.png" alt="Trophy">
+              <!-- <lightning-icon icon-name="custom:custom43" title="custom88"></lightning-icon> -->
+            </th>
+          </tr>
+          <tr>
+            <td>
+              <h5 align="center" style="color:black;">
+                <span style="background-color: antiquewhite;">
+                  <b>How <i>WINNABLE</i> is this opportunity? </b>
+                </span>
+              </h5>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <center>Our Relationship</center>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <lightning-slider label="" max="10" variant="label-hnameden" name="s7" value="0" onchange={handleChange} disabled={Lockval}></lightning-slider>
+            </td>
+          </tr>
+          <tr>
+            <td style="font-size: 10px;"> New unknown client &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Solid partnership </td>
+          </tr>
+          <tr>
+            <td>
+              <div class="slds-align_absolute-center">Ability to Deliver</div>
+              <lightning-slider label="" max="10" variant="label-hnameden" name="s8" value="0" onchange={handleChange} disabled={Lockval}></lightning-slider>
+            </td>
+          </tr>
+          <tr>
+            <td style="font-size: 10px;"> External support required &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Done this before </td>
+          </tr>
+          <tr>
+            <td>
+              <div align="center">Competitive Advantage</div>
+              <lightning-slider label="" max="10" variant="label-hnameden" name="s9" value="0" onchange={handleChange} disabled={Lockval}></lightning-slider>
+            </td>
+          </tr>
+          <tr>
+            <td style="font-size: 10px;"> Too much competition &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Strong competitive advantage </td>
+          </tr>
+          <tr>
+            <td>
+              <div align="center">Location</div>
+              <lightning-slider label="" max="10" variant="label-hnameden" name="s10" value="0" onchange={handleChange} disabled={Lockval}></lightning-slider>
+            </td>
+          </tr>
+          <tr>
+            <td style="font-size: 10px;"> Isolated >100km from our work &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Similar projects in the location </td>
+          </tr>
+          <tr>
+            <td>
+              <div align="center">Influence</div>
+              <lightning-slider label="" max="10" variant="label-hnameden" name="s11" value="0" onchange={handleChange} disabled={Lockval}></lightning-slider>
+            </td>
+          </tr>
+          <tr>
+            <td style="font-size: 10px;"> No prior knowledge &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Actively prospected </td>
+          </tr>
+        </table>
+      </div>
+      <!-- 3 DIV -->
+      <div class={change}>
+        <table>
+          <tr>
+            <td>
+              <img src="https://thumbs.dreamstime.com/b/set-black-isolated-icons-cross-tick-white-background-icon-check-box-silhouette-yes-no-132931685.jpg" alt="right" width="100px" style="margin-left:100px ;">
+            </td>
+          </tr>
+          <tr>
+            <td class="da2" style="font-size: 20px;">
+              <center>{sum2}</center>
+            </td>
+          </tr>
+          <tr style="height:200px;">
+            <td class="da">
+                <center><b>{sum3}</b></center>
+            </td>
+          </tr>
+          <tr>
+            <td style="font-size: 20px;">
+              <center>Total Score</center>
+            </td>
+          </tr>
+          <tr>
+            <td style="font-size: 10px;font-size:60px;">
+              <center>{sum}/110</center>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <button class="slds-button slds-button_brand btn" onclick={handleClick}>Submit</button>
+    </div>
+    <!-- try to click -->
+  </template>

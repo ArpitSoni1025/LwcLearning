@@ -1,0 +1,25 @@
+<template>
+    <lightning-card title="Lifecycle hook parent card">
+        <div class="slds-var-m-around_medium">
+            <input type="text" onkeyup={changeHandler}/>
+            {name}
+            <c-learn-life-cycle-child-hook></c-learn-life-cycle-child-hook>
+        </div>
+    </lightning-card>
+
+    <lightning-card title="Lifecycle hook parent card for Disconnected Callback">
+        <div class="slds-var-m-around_medium">
+            <template if:true={ischildvisible}>
+                <lightning-button variant="brand" label="Remove Child" title="Remove Child" onclick={handleClick} class="slds-m-left_x-small">
+                </lightning-button>
+            </template>
+            <template if:false={ischildvisible}>
+                <lightning-button variant="brand" label="Show Child" title="Show Child" onclick={handleClick} class="slds-m-left_x-small">
+                </lightning-button>
+            </template>
+           <template if:true={ischildvisible}>
+            <c-learn-life-cycle-child-hook></c-learn-life-cycle-child-hook>
+           </template>
+        </div>
+    </lightning-card>
+</template>

@@ -1,0 +1,81 @@
+<template>
+    <!--Part 1: DataBinding Demo-->
+    <lightning-card title="Two way data binding demo" icon-name="custom:custom2">
+
+    <div class="slds-p-around_medium">
+        <lightning-input type="text" name="fullname" label="Enter your fullname" value={fullname} onkeyup={changeHandler}>
+        </lightning-input>
+    </div>
+    <div class="slds-p-around_medium">
+        <lightning-input type="text" name="title" label="Enter your title" value={title} onkeyup={changeHandler}>
+        </lightning-input>
+    </div>
+    <div class="slds-p-around_medium">
+        <h5>My Name is {fullname} and my title is {title}</h5>
+    </div>
+    </lightning-card>
+    <!--Part 2: @track Properties -->
+    <lightning-card title="@track properties">
+        <div class="slds-var-m-around_medium">
+        <lightning-input type="text" label="Enter City Name" onkeyup={trackHandler}></lightning-input>
+        <div>{address.city} is my city</div>
+        </div>
+    </lightning-card>
+
+    <!--Part 3: Getter Demo-->
+    <lightning-card title="Getter Demo">
+    <div class="slds-var-m-around_medium">
+        <div>First username is {firtsUser}</div>
+        <div>Multiplication of {num1} and {num2} is {multiply}</div>
+    </div>
+    </lightning-card>
+    <!--Part 4: Conditional rendering Demo-->
+    <!-- card for if:true demo -->
+    <lightning-card title="if:true demo" icon-name="custom:custom17">
+        <ul>
+            <button class="slds-button slds-button_success" onclick={showHandler}>Click to show text</button>
+        </ul>
+        <template if:true={showText}>
+            This is only to show the text.
+        </template>
+    </lightning-card>
+    <!-- card for if:false demo -->
+    <lightning-card title="if:false demo" icon-name="custom:custom17">
+        <ul>
+            <button class="slds-button slds-button_destructive" onclick={hideHandler}>Click to hide text</button>
+        </ul>
+        <template if:false={hideText}>
+            This is only to hide the text.
+        </template>
+    </lightning-card>
+    <!-- card for toggle demo -->
+    <lightning-card title="Toggle demo" icon-name="custom:custom16">
+        <ul>
+            <button class="slds-button slds-button_brand" onclick={toggleHandler}>Click for toggle the text</button>
+        </ul>
+        <template if:true={toggleText}>
+            This is for the toggle to show and hide text.
+        </template>
+    </lightning-card>
+    <!--card for if:true and if:false with same button-->
+    <lightning-card title="if:true and if:false with same button demo">
+        <ul>
+            <button class="slds-button slds-button_success" onclick={visibleHandler}>Click</button>
+        </ul>
+        <template if:true={isVisible}>
+            Welcome to the salesforce area.
+        </template>
+        <template if:false={isVisible}>
+            You can't see the data, please click me.
+        </template>
+    </lightning-card>
+    <!-- Type a correct word(Hello) to see the data -->
+    <!-- Type a correct word(Hello) to see the data -->
+
+    <lightning-card title="Type a correct word(Hello) and get the text">
+        <lightning-input type="text" label="Type Hello to see the text" onkeyup={changeHelloHandler}></lightning-input>
+        <template if:true={helloMethod}>
+            <div>Great! you have typed correct word.</div>
+        </template>
+    </lightning-card>
+</template>

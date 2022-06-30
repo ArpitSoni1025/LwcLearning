@@ -1,0 +1,17 @@
+/* element, Classes, Pseudo */
+/*element type css*/
+p{
+    color: green;
+    font-size: 30px;
+    border: 1px solid red;
+}
+/*classes type css*/
+.user{
+        color: pink;
+        font-size: 20px;
+}
+/*Pseudo type css*/
+.user:hover{
+    font-size: 50px;
+    color: rgb(50, 20, 220);
+}

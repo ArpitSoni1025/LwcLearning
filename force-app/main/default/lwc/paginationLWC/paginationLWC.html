@@ -1,0 +1,27 @@
+<template>
+    <lightning-card title="Pagination Opportunity List" icon-name="custom:custom63">
+        <div class="slds-var-m-vertical_medium">
+            <template if:true={visibleOpp}>
+                <template for:each={visibleOpp} for:item="opportunity">
+                    <p key={opportunity.Id}>{opportunity.Name}</p>
+                </template>
+            </template>
+            <div slot="footer" class="slds-var-m-vertical_medium">
+                <c-pagination records={totalOpp} onupdate={updateOppHandler}></c-pagination>
+            </div>
+        </div>
+    </lightning-card>
+
+    <lightning-card title="Pagination Account List" icon-name="custom:custom63">
+        <div class="slds-var-m-vertical_medium">
+            <template if:true={visibleAcc}>
+                <template for:each={visibleAcc} for:item="account">
+                    <p key={account.Id}>{account.Name}</p>
+                </template>
+            </template>
+            <div slot="footer" class="slds-var-m-vertical_medium">
+                <c-pagination records={totalAcc} record-size="7" onupdate={updateAccHandler}></c-pagination>
+            </div>
+        </div>
+    </lightning-card>
+</template>

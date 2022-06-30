@@ -1,0 +1,28 @@
+<template>
+    <!--Example of Simple data from child component(learnP2cAlertComponent)-->
+    <c-learn-p2c-alert-component
+        message = "Hurray!! I got the data."
+        card-heading = "Parent to Child primitive data communication"
+        number=20
+        is-valid =false>
+    </c-learn-p2c-alert-component>
+
+    <!--Example of COMPLEX data from child component(learnP2cCarouselComponent)-->
+    <div class="slds-var-m-bottom_medium">
+        <c-learn-p2c-carousel-component
+        carousel-details={carouselData}></c-learn-p2c-carousel-component>
+    </div>
+
+    <!--Example of data PASSING on ACTION from child component(learnP2cAlertComponent)-->
+    <div class="slds-var-m-bottom_medium"></div>
+        <lightning-card title="Template for:each Looping Demo">
+            <div class="slds-var-m-around_medium">
+                <lightning-input type="number" label="Enter percentage" value={percent} onkeyup={changeHandler}></lightning-input>
+                <c-learn-p2c-progress-component progress-value={percent}></c-learn-p2c-progress-component>
+            </div>
+        </lightning-card>
+
+    <!--Example of Calling child method from parent(learnP2cSliderComponent)-->
+    <lightning-button variant="brand" label="Reset Slider" onclick={handleClick}></lightning-button>
+    <c-learn-p2c-slider-component></c-learn-p2c-slider-component>
+</template>

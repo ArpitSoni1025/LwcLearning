@@ -1,0 +1,8 @@
+:host {
+   
+    --slds-c-card-radius-border :5%;
+}
+lightning-button.button {
+	--sds-c-button-brand-color-background: #bb00ff;
+    --sds-c-button-text-color: #f4f7f9;
+}

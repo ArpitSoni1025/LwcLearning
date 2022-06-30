@@ -1,0 +1,19 @@
+.child{
+width: 30%;
+height: 590px;
+margin-right: 10px;
+background: white;
+border: 1px;
+padding: 5px;
+float: left;
+}
+.box
+{
+width: 30%;
+height: 590px;
+margin-right: 10px;
+background: rgb(216, 244, 248);
+border: 1px solid black;
+padding: 5px;
+float: left;
+}

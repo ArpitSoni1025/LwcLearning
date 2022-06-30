@@ -1,0 +1,15 @@
+h1{
+    font-size: 30px;
+    color: red;
+}
+
+/*c-learn-css-demo-child{
+    display: block;
+    background-color: green;
+    color: white;
+    font-size: 20px;
+}*/
+p{
+    color:yellow;
+    font-size: 20px;
+}

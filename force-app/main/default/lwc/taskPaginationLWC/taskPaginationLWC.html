@@ -1,0 +1,246 @@
+<template>
+    <lightning-button variant="brand"
+    label="Pagination Modal"
+    title="Modal popUp!"
+    onclick={openModal}
+    class="slds-m-left_x-small">
+    </lightning-button>
+    <lightning-record-edit-form>
+    <template if:true={showModal}>
+    <section role="dialog" tabindex="-1" aria-modal="true" aria-labelledby="modal-heading-01" aria-describedby="modal-content-id-1" class="slds-modal slds-backdrop slds-fade-in-open slds-modal_medium">
+      <div class="slds-modal__container">
+        <button class="slds-button slds-button_icon slds-modal__close slds-button_icon-inverse" title="Close" onclick={closeModal}>
+            <lightning-icon icon-name="utility:close" alternative-text="close" variant="inverse" size="small" ></lightning-icon>
+            <span class="slds-assistive-text">Cancel and close</span>
+          </button>
+      <!--Page 1-->
+      <template if:true={showPage1}>
+      <lightning-card class="slds-modal__content slds-p-around_medium" id="modal-content-id-1">
+        <div class="header slds-theme_offline">
+          <table>
+            <tr style="height:30px;">
+              <td style="float: left;">{name}</td>
+              <!--<td style="float: right;"> {date}</td>-->
+              <td style="float: right;"><lightning-formatted-date-time value={start} year="numeric" day="2-digit" month="numeric" time-zone="UTC"></lightning-formatted-date-time></td>
+            </tr>
+          </table>
+        </div>
+        
+          <h2 class="slds-p-around_medium" align="center"><u><b>Current Account Status</b></u></h2>
+          <h3>Customer Since: 2021-09-13</h3>
+          <h3>Assets:</h3>
+          <div class="slds-p-around_medium" style="margin-left: 100px;">
+            <table>
+              <tr style="background-color: rgb(237, 240, 241);">
+                <th>Name</th>
+                <th>Install Date</th>
+                <th>Quantity</th>
+              </tr>
+              <tr>
+                <td>Test</td>
+                <td>2021-09-21</td>
+                <td>21</td>
+              </tr>
+            </table>
+          </div>
+          <p>Last Consumable Order Date:</p>
+          <p>Current Tier Status: Black diamond</p>
+          <p>Revenue Needed To Achieve Next Tier:</p>
+        
+          <h2 class="slds-p-around_medium" align="center"><u><b>Check-In</b></u></h2>
+          <div class="slds-form-element slds-form-element_horizontal">
+            <!--<label class="slds-form-element__label" for="single-form-element-id-02">Label</label>
+            <div class="slds-form-element__control">
+              <input type="text" id="single-form-element-id-02" placeholder="Placeholder text…" class="slds-input" />
+            </div>-->
+            <div class="slds-p-bottom_medium">
+            <lightning-input type="text" label="What I enjoy most about HF is..."></lightning-input>
+            </div>
+            <div class="slds-p-bottom_medium">
+            <lightning-input type="text" label="Knowing what I know now, I would change..."></lightning-input>
+            </div>
+            <div class="slds-p-bottom_medium">
+            <lightning-input type="text" label="My BDM can better support me by..."></lightning-input>
+            </div>
+          </div>
+          <div class="slds-p-around_medium" style="margin-left:60px;">
+            <table>
+              <tr style="background-color: rgb(237, 240, 241);">
+                <th>Treatment</th>
+                <th class="slds-p-right_medium">Client Charge</th>
+                <th class="slds-p-right_medium">Current # Per Week</th>
+                <th class="slds-p-right_medium">Goal Per Week</th>
+              </tr>
+              <tr>
+                <td>Signature</td>
+                <td class="slds-p-right_medium"><lightning-input type="text"></lightning-input></td>
+                <td class="slds-p-right_medium"><lightning-input type="text"></lightning-input></td>
+                <td class="slds-p-right_medium"><lightning-input type="text"></lightning-input></td>
+              </tr>
+              <tr>
+                <td>Delux</td>
+                <td class="slds-p-right_medium"><lightning-input type="text"></lightning-input></td>
+                <td class="slds-p-right_medium"><lightning-input type="text"></lightning-input></td>
+                <td class="slds-p-right_medium"><lightning-input type="text"></lightning-input></td>
+              </tr>
+              <tr>
+                <td>Platinum</td>
+                <td class="slds-p-right_medium"><lightning-input type="text"></lightning-input></td>
+                <td class="slds-p-right_medium"><lightning-input type="text"></lightning-input></td>
+                <td class="slds-p-right_medium"><lightning-input type="text"></lightning-input></td>
+              </tr>
+              <tr>
+                <td>Body/Other</td>
+                <td class="slds-p-right_medium"><lightning-input type="text"></lightning-input></td>
+                <td class="slds-p-right_medium"><lightning-input type="text"></lightning-input></td>
+                <td class="slds-p-right_medium"><lightning-input type="text"></lightning-input></td>
+              </tr>
+              <tr>
+                <td>Keravive</td>
+                <td class="slds-p-right_medium"><lightning-input type="text"></lightning-input></td>
+                <td class="slds-p-right_medium"><lightning-input type="text"></lightning-input></td>
+                <td class="slds-p-right_medium"><lightning-input type="text"></lightning-input></td>
+              </tr>
+            </table>
+          </div>
+          <lightning-button label="Calculate" class="slds-p-around_medium slds-align_absolute-center"></lightning-button>
+         
+          <h2 class="slds-p-around_medium" align="center"><u><b>Delivery System & ROI</b></u></h2>
+          <p>Current Quarterly Revenue:</p>
+          <p>Goal Quarterly Revenue:</p>
+          <p>Time For Another Sysytem?:</p>
+          <p>Trade Up?:</p>
+
+          <h2 class="slds-p-around_medium" align="center"><u><b>Goal Setting</b></u></h2>
+          <p>Increase in Quarterly Revenue based on Goals:</p>
+          <p>Previous %</p>
+          <p>Current %</p>
+          <p>Goal %</p>
+        
+        <lightning-button label="Next" class="slds-p-around_medium slds-align_absolute-center" onclick={visiblePage2}></lightning-button>
+      </lightning-card>
+    </template>
+      <!--Page 2-->
+    <template if:true={showPage2}>
+      <lightning-card class="slds-modal__content slds-p-around_medium">
+        <div class="header slds-theme_offline">
+          <table>
+            <tr style="height:30px;">
+              <td style="float: left;"> {name}</td>
+              <!--<td style="float: right;">{date}</td>-->
+              <td style="float: right;"><lightning-formatted-date-time value={start} year="numeric" day="2-digit" month="numeric" time-zone="UTC"></lightning-formatted-date-time></td>
+            </tr>
+          </table>
+        </div>
+        
+          <h2 class="slds-p-around_medium" align="center"><u><b>Opportunities For Personalization</b></u></h2>
+          <div class="slds-col slds-size_1-of-2 slds-form-element slds-form-element_horizontal">
+            <div class="slds-p-bottom_medium">
+            <lightning-input type="text" label="Boosters"></lightning-input>
+            </div>
+            <div class="slds-p-bottom_medium">
+            <lightning-input type="text" label="Perk"></lightning-input>
+            </div>
+            <div class="slds-p-bottom_medium">
+            <lightning-input type="text" label="Keravive"></lightning-input>
+            </div>
+          </div>
+
+          <h2 class="slds-p-around_medium" align="center"><u><b>Marketing</b></u></h2>
+          <div class="slds-col slds-size_1-of-2 slds-form-element slds-form-element_horizontal">
+          <div class="slds-p-bottom_medium">
+          <lightning-input type="text" label="Social Media"></lightning-input>
+          </div>
+          <div class="slds-p-bottom_medium">
+          <lightning-input type="text" label="Events"></lightning-input>
+          </div>
+          <div class="slds-p-bottom_medium">
+          <lightning-input type="text" label="Others"></lightning-input>
+          </div>
+          </div>
+
+          <h2 class="slds-p-around_medium" align="center"><u><b>Trainning & Engagement</b></u></h2>
+          <p>Past Course Attended:</p>
+          <div class="slds-p-around_medium" style="margin-left: 100px;">
+            <table>
+              <tr style="background-color: rgb(237, 240, 241);">
+                <th>Name</th>
+                <th>Type</th>
+                <th>Status</th>
+              </tr>
+              <tr>
+                <td>GC Product Webinar - Jan 7, 2002</td>
+                <td>Webinar</td>
+                <td>Completed</td>
+              </tr>
+              <tr>
+                <td>DM Campaign to Top Customers - Nov 12-23, 2001</td>
+                <td>Direct Mail</td>
+                <td>Completed</td>
+              </tr>
+            </table>
+          </div>
+          <div class="slds-form-element slds-form-element_horizontal">
+          <div class="slds-p-bottom_medium">
+          <lightning-input type="text" label="Future Course Interested In"></lightning-input>
+          </div>
+          <div class="slds-p-bottom_medium">
+          <lightning-input type="text" label="What else would you like to talk about?"></lightning-input>
+          </div>
+          </div>
+
+          <div class="slds-p-around_medium" align="center">
+          <lightning-button label="Previous" onclick={visiblePage1}></lightning-button>
+          <lightning-button label="Next" icon-position="right" onclick={visiblePage3}></lightning-button>
+          </div>
+      </lightning-card>
+    </template>
+      <!--Page 3-->
+    <template if:true={showPage3}>
+      <lightning-card class="slds-modal__content slds-p-around_medium">
+        <div class="header slds-theme_offline">
+          <table>
+            <tr style="height:30px;">
+              <td style="float: left;">{name}</td>
+              <!--<td style="float: right;">{date}</td>-->
+              <td style="float: right;"><lightning-formatted-date-time value={start} year="numeric" day="2-digit" month="numeric" time-zone="UTC"></lightning-formatted-date-time></td>
+            </tr>
+          </table>
+        </div>
+        
+          <h2 class="slds-p-around_medium" align="center"><u><b>Action Plan</b></u></h2>
+          <div class="slds-p-around_medium" style="margin-left:30px;">
+            <table>
+              <tr style="background-color: rgb(237, 240, 241);">
+                <th>Task</th>
+                <th>Date to be Completed</th>
+                <th>Contact Responsible</th>
+              </tr>
+              <tr>
+                <td class="slds-p-right_medium"><lightning-input type="text"></lightning-input></td>
+                <td class="slds-p-right_medium"><lightning-input type="date"></lightning-input></td>
+                <td class="slds-p-right_medium"><lightning-input type="text"></lightning-input></td>
+              </tr>
+              <tr>
+                <td class="slds-p-right_medium"><lightning-input type="text"></lightning-input></td>
+                <td class="slds-p-right_medium"><lightning-input type="date"></lightning-input></td>
+                <td class="slds-p-right_medium"><lightning-input type="text"></lightning-input></td>
+              </tr>
+              <tr>
+                <td class="slds-p-right_medium"><lightning-input type="text"></lightning-input></td>
+                <td class="slds-p-right_medium"><lightning-input type="date"></lightning-input></td>
+                <td class="slds-p-right_medium"><lightning-input type="text"></lightning-input></td>
+              </tr>
+            </table>
+          </div>
+        <div align="center">
+        <lightning-button label="Previous"  onclick={visiblePage2}></lightning-button>
+        <lightning-button label="Submit" icon-position="right" onclick={submitDetails}></lightning-button>
+        </div>
+      </lightning-card>
+      </template>
+     </div>
+    </section>
+    </template>
+    </lightning-record-edit-form>
+  </template>
